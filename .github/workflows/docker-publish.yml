@@ -78,8 +78,8 @@ jobs:
           context: ./docker/
           file: ./docker/Dockerfile-base
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: latest
+          labels: label-latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
